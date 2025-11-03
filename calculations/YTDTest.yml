@@ -1,0 +1,6 @@
+unique_name: YTDTest
+object_type: metric_calc
+label: YTDTest
+expression: ([DateDim].[TimeCalcs].[Current], [Measures].[SalesAmount])
+format: $#,##0.00
+is_hidden: false

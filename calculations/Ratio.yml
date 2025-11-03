@@ -1,0 +1,7 @@
+unique_name: Ratio
+object_type: metric_calc
+label: Ratio
+expression: >-
+  ([DateDim].[TimeCalcs].CurrentMember,[Measures].[SalesAmount])/([DateDim].[TimeCalcs].CurrentMember,[Measures].[OrderQuantity])
+format: percent
+is_hidden: false

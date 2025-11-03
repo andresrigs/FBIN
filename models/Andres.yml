@@ -1,0 +1,34 @@
+unique_name: Andres
+object_type: model
+label: Andres
+metrics:
+  - unique_name: OrderQuantity
+  - unique_name: SalesAmount
+  - unique_name: YTDTest
+  - unique_name: Ratio
+  - unique_name: New Calculation
+relationships:
+  - unique_name: factinternetsales_productkey_to_ProductDim_dimproduct_dimension Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - productkey
+    to:
+      dimension: ProductDim
+      level: dimproduct_dimension Level
+  - unique_name: factinternetsales_orderdatekey_to_DateDim_datecustom_dimension Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: DateDim
+      level: datecustom_dimension Level
+  - unique_name: factinternetsales_customerkey_to_CustomerDim_dimcustomer_dimension Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - customerkey
+    to:
+      dimension: CustomerDim
+      level: dimcustomer_dimension Level

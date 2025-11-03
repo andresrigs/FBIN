@@ -1,0 +1,55 @@
+unique_name: DateDim
+object_type: dimension
+label: DateDim
+calculation_groups:
+  - unique_name: TimeCalcs
+    label: TimeCalcs
+    calculated_members:
+      - unique_name: Current
+        template: Current
+        use_input_metric_format: true
+      - unique_name: Last Year
+        template: Last Year
+        use_input_metric_format: true
+      - unique_name: YoY
+        template: Current vs Last Year
+        use_input_metric_format: true
+      - unique_name: YoY Pct
+        template: Current vs Last Year Pct
+      - unique_name: Year to Date
+        template: Year to Date
+        use_input_metric_format: true
+hierarchies:
+  - unique_name: datecustom_dimension Hierarchy
+    label: datecustom_dimension Hierarchy
+    levels:
+      - unique_name: year_name
+      - unique_name: month
+      - unique_name: datecustom_dimension Level
+level_attributes:
+  - unique_name: datecustom_dimension Level
+    label: datecustom_dimension Level
+    contains_unique_names: false
+    dataset: datecustom
+    is_unique_key: false
+    key_columns:
+      - datekey
+    name_column: pk_date
+    time_unit: day
+  - unique_name: month
+    label: month
+    contains_unique_names: false
+    dataset: datecustom
+    key_columns:
+      - month
+    name_column: month_name
+    time_unit: month
+  - unique_name: year_name
+    label: year_name
+    contains_unique_names: false
+    dataset: datecustom
+    key_columns:
+      - year_name
+    name_column: year_name
+    time_unit: year
+type: time

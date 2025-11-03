@@ -1,0 +1,6 @@
+version: 1
+unique_name: andresTST
+object_type: catalog
+label: andresTST
+aggressive_agg_promotion: false
+build_speculative_aggs: true

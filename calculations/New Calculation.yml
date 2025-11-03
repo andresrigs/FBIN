@@ -1,0 +1,7 @@
+unique_name: New Calculation
+object_type: metric_calc
+label: New Calculation
+expression: >-
+  CASE WHEN [DateDim].[TimeCalcs].CurrentMember.Name = 'YoY' THEN
+  [Measures].[SalesAmount] ELSE [Measures].[OrderQuantity] END
+is_hidden: false
