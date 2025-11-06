@@ -15,6 +15,7 @@ calculation_groups:
         template: Current vs Last Year
         use_input_metric_format: true
       - unique_name: YoY Pct
+        format: percent
         template: Current vs Last Year Pct
       - unique_name: Year to Date
         template: Year to Date

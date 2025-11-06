@@ -7,6 +7,23 @@ hierarchies:
     levels:
       - unique_name: gender
       - unique_name: dimcustomer_dimension Level
+        secondary_attributes:
+          - unique_name: firstname
+            label: firstname
+            contains_unique_names: false
+            dataset: dimcustomer
+            is_unique_key: false
+            key_columns:
+              - firstname
+            name_column: firstname
+          - unique_name: lastname
+            label: lastname
+            contains_unique_names: false
+            dataset: dimcustomer
+            is_unique_key: false
+            key_columns:
+              - lastname
+            name_column: lastname
 level_attributes:
   - unique_name: dimcustomer_dimension Level
     label: dimcustomer_dimension Level

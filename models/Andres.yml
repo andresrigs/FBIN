@@ -32,3 +32,16 @@ relationships:
     to:
       dimension: CustomerDim
       level: dimcustomer_dimension Level
+perspectives:
+  - unique_name: Andres-Persp
+    dimensions:
+      - hierarchies:
+          - level: dimcustomer_dimension Level
+            name: dimcustomer_dimension Hierarchy
+        name: CustomerDim
+        secondaryattributes:
+          - firstname
+          - lastname
+    metrics:
+          - OrderQuantity
+          - Ratio
