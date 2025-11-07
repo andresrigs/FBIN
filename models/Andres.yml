@@ -1,12 +1,27 @@
 unique_name: Andres
 object_type: model
 label: Andres
+dimensions: []
 metrics:
   - unique_name: OrderQuantity
   - unique_name: SalesAmount
   - unique_name: YTDTest
   - unique_name: Ratio
   - unique_name: New Calculation
+  - unique_name: Weight
+perspectives:
+  - unique_name: Andres-Persp
+    dimensions:
+      - name: CustomerDim
+        hierarchies:
+          - name: dimcustomer_dimension Hierarchy
+            level: dimcustomer_dimension Level
+        secondaryattributes:
+          - firstname
+          - lastname
+    metrics:
+      - OrderQuantity
+      - Ratio
 relationships:
   - unique_name: factinternetsales_productkey_to_ProductDim_dimproduct_dimension Level
     from:
@@ -32,16 +47,26 @@ relationships:
     to:
       dimension: CustomerDim
       level: dimcustomer_dimension Level
-perspectives:
-  - unique_name: Andres-Persp
-    dimensions:
-      - hierarchies:
-          - level: dimcustomer_dimension Level
-            name: dimcustomer_dimension Hierarchy
-        name: CustomerDim
-        secondaryattributes:
-          - firstname
-          - lastname
-    metrics:
-          - OrderQuantity
-          - Ratio
+  - unique_name: >-
+      factinternetsales_salesordernumber_to_factdemotab_dimension_factdemotab_dimension
+      Level
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - salesordernumber
+        - salesorderlinenumber
+    to:
+      dimension: factdemotab_dimension
+      level: factdemotab_dimension Level
+  - unique_name: >-
+      factdemotab copy
+      (1)_salesorderlinenumber_to_factdemotab_dimension_factdemotab_dimension
+      Level
+    from:
+      dataset: factdemotab copy (1)
+      join_columns:
+        - salesordernumber
+        - salesorderlinenumber
+    to:
+      dimension: factdemotab_dimension
+      level: factdemotab_dimension Level

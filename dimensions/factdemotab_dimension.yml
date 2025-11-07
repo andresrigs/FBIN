@@ -1,0 +1,31 @@
+unique_name: factdemotab_dimension
+object_type: dimension
+label: factdemotab_dimension
+hierarchies:
+  - unique_name: factdemotab_dimension Hierarchy
+    label: factdemotab_dimension Hierarchy
+    levels:
+      - unique_name: factdemotab_dimension Level
+level_attributes:
+  - unique_name: factdemotab_dimension Level
+    label: factdemotab_dimension Level
+    contains_unique_names: false
+    dataset: factdemotab
+    is_unique_key: false
+    key_columns:
+      - salesordernumber
+      - salesorderlinenumber
+    name_column: salesordernumber
+relationships:
+  - unique_name: factdemotab_color_to_Color Dim_color
+    from:
+      dataset: factdemotab
+      hierarchy: factdemotab_dimension Hierarchy
+      join_columns:
+        - color
+      level: factdemotab_dimension Level
+    to:
+      dimension: Color Dim
+      level: color
+    type: embedded
+type: standard

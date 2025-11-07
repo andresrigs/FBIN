@@ -1,0 +1,18 @@
+unique_name: Color Dim
+object_type: dimension
+label: Color Dim
+hierarchies:
+  - unique_name: Color
+    label: Color
+    levels:
+      - unique_name: color
+level_attributes:
+  - unique_name: color
+    label: color
+    contains_unique_names: false
+    dataset: factdemotab copy
+    key_columns:
+      - color
+    name_column: color
+relationships: []
+type: standard
