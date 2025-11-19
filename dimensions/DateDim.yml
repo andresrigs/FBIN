@@ -20,6 +20,17 @@ calculation_groups:
       - unique_name: Year to Date
         template: Year to Date
         use_input_metric_format: true
+      - unique_name: Month to Date
+        template: Month to Date
+        use_input_metric_format: true
+      - unique_name: 3 Months ago
+        expression: >-
+          (ParallelPeriod([DateDim].TimeMonths, 2, [DateDim].CurrentMember),
+          [Measures].currentMember)
+        use_input_metric_format: true
+      - unique_name: Previous
+        template: Previous
+        use_input_metric_format: true
 hierarchies:
   - unique_name: datecustom_dimension Hierarchy
     label: datecustom_dimension Hierarchy
@@ -44,6 +55,7 @@ level_attributes:
     key_columns:
       - month
     name_column: month_name
+    sort_column: month
     time_unit: month
   - unique_name: year_name
     label: year_name

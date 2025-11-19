@@ -1,6 +1,18 @@
 unique_name: ProductDim
 object_type: dimension
 label: ProductDim
+calculation_groups:
+  - unique_name: ProductDim Calculation Group
+    label: ProductDim Calculation Group
+    calculated_members:
+      - unique_name: Current
+        template: Current
+        use_input_metric_format: true
+      - unique_name: test
+        expression: >-
+          ([ProductDim].[dimproduct_dimension Hierarchy].[productline].&[M],
+          [Measures].currentMember)
+        use_input_metric_format: true
 hierarchies:
   - unique_name: dimproduct_dimension Hierarchy
     label: dimproduct_dimension Hierarchy
@@ -21,6 +33,6 @@ level_attributes:
     contains_unique_names: false
     dataset: dimproduct
     key_columns:
-      - productline
-    name_column: productline
+      - productlinetrimed
+    name_column: productlinetrimed
 type: standard

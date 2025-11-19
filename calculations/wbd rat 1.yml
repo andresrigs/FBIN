@@ -1,0 +1,5 @@
+unique_name: wbd rat 1
+object_type: metric_calc
+label: wbd rat 1
+expression: MDX expression
+is_hidden: false
