@@ -1,0 +1,31 @@
+unique_name: orderD
+object_type: dimension
+label: orderD
+hierarchies:
+  - unique_name: OrderH
+    label: OrderH
+    levels:
+      - unique_name: order
+level_attributes:
+  - unique_name: order
+    label: order
+    contains_unique_names: false
+    dataset: factdemotab
+    is_unique_key: false
+    key_columns:
+      - salesordernumber
+      - salesorderlinenumber
+    name_column: salesordernumber
+relationships:
+  - unique_name: factdemotab_color_to_Color Dim_color
+    from:
+      dataset: factdemotab
+      hierarchy: OrderH
+      join_columns:
+        - color
+      level: order
+    to:
+      dimension: Color Dim
+      level: color
+    type: embedded
+type: standard

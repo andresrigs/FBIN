@@ -48,26 +48,47 @@ relationships:
     to:
       dimension: CustomerDim
       level: dimcustomer_dimension Level
-  - unique_name: >-
-      factinternetsales_salesordernumber_to_factdemotab_dimension_factdemotab_dimension
-      Level
+  - unique_name: factinternetsales_salesordernumber_to_orderD_order
     from:
       dataset: factinternetsales
       join_columns:
         - salesordernumber
         - salesorderlinenumber
     to:
-      dimension: factdemotab_dimension
-      level: factdemotab_dimension Level
-  - unique_name: >-
-      factdemotab copy
-      (1)_salesorderlinenumber_to_factdemotab_dimension_factdemotab_dimension
-      Level
+      dimension: orderD
+      level: order
+  - unique_name: factdemotab copy (1)_salesorderlinenumber_to_orderD_order
     from:
       dataset: factdemotab copy (1)
       join_columns:
         - salesordernumber
         - salesorderlinenumber
     to:
-      dimension: factdemotab_dimension
-      level: factdemotab_dimension Level
+      dimension: orderD
+      level: order
+  - unique_name: factdemotab copy (1)_productkey_to_ProductDim_dimproduct_dimension Level
+    from:
+      dataset: factdemotab copy (1)
+      join_columns:
+        - productkey
+    to:
+      dimension: ProductDim
+      level: dimproduct_dimension Level
+  - unique_name: >-
+      factdemotab copy (1)_customerkey_to_CustomerDim_dimcustomer_dimension
+      Level
+    from:
+      dataset: factdemotab copy (1)
+      join_columns:
+        - customerkey
+    to:
+      dimension: CustomerDim
+      level: dimcustomer_dimension Level
+  - unique_name: factdemotab copy (1)_orderdatekey_to_DateDim_datecustom_dimension Level
+    from:
+      dataset: factdemotab copy (1)
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: DateDim
+      level: datecustom_dimension Level
