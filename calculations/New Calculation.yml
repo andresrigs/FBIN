@@ -14,5 +14,5 @@ expression: |-
               ),
               ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
           )
-          / [Measures].[SalesAmount]
+          / ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
       )
