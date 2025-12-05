@@ -3,7 +3,7 @@ object_type: metric_calc
 label: New Calculation
 expression: |-
   IIF(
-      [Measures].[ColorBlue]=0,
+      ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])=0,
       NULL,
       AGGREGATE(
           NONEMPTY(
@@ -12,7 +12,7 @@ expression: |-
                   [Measures].[Weight],[DateDim].[datecustom_dimension Hierarchy].CurrentMember
                   )
               ),
-              [Measures].[ColorBlue]
+              ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
           )
           / ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
       )
