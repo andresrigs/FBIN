@@ -10,6 +10,7 @@ metrics:
   - unique_name: New Calculation
   - unique_name: Weight
   - unique_name: m_factinternetsales_customerkey_dc
+  - unique_name: ColorBlue
 perspectives:
   - unique_name: Andres-Persp
     dimensions:

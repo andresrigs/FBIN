@@ -1,0 +1,4 @@
+unique_name: ColorBlue
+object_type: metric_calc
+label: ColorBlue
+expression: ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
