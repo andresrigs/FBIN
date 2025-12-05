@@ -1,7 +1,18 @@
 unique_name: New Calculation
 object_type: metric_calc
 label: New Calculation
-expression: >-
-  CASE WHEN [DateDim].[TimeCalcs].CurrentMember.Name = 'YoY' THEN
-  [Measures].[SalesAmount] ELSE [Measures].[OrderQuantity] END
-is_hidden: false
+expression: |-
+  IIF(
+      [Measures].[SalesAmount]=0,
+      NULL,
+      AGGREGATE(
+          NONEMPTY(
+                  [orderD].[orderH].[order].members,
+                  (
+                  [Measures].[Weight],[DateDim].[datecustom_dimension Hierarchy].CurrentMember
+                  )
+              ),
+              ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
+          )
+          / [Measures].[SalesAmount]
+      )
