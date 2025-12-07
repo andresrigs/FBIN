@@ -1,0 +1,18 @@
+unique_name: New Calculation copy
+object_type: metric_calc
+label: New Calculation
+expression: |-
+  IIF(
+      ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])=0,
+      NULL,
+      AGGREGATE(
+          NONEMPTY(
+                  [orderD].[orderH].[order].members,
+                  (
+                  [Measures].[Weight],[DateDim].[datecustom_dimension Hierarchy].CurrentMember
+                  )
+              ),
+              ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
+          )
+          / ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
+      )
