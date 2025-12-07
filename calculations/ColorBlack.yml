@@ -1,0 +1,4 @@
+unique_name: ColorBlack
+object_type: metric_calc
+label: ColorBlack
+expression: ([Measures].[Weight], [Color Dim].[Color].[color].&[Black])

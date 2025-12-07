@@ -9,7 +9,7 @@ expression: |-
           [Measures].[Weight]
           ),
           NonEmpty([orderD].[orderH].[order].Members, 
-          [Measures].[SalesAmount]
+          [Measures].[ColorBlue]
           )
       ),
       [Measures].[SalesAmount]
