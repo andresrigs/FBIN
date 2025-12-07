@@ -1,6 +1,6 @@
 unique_name: New Calculation copy
 object_type: metric_calc
-label: New Calculation copy
+label: New Calculation
 expression: |-
   Aggregate(
       Intersect(
