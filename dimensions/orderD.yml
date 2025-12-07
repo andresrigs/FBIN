@@ -11,7 +11,7 @@ level_attributes:
     label: order
     contains_unique_names: false
     dataset: factdemotab
-    is_unique_key: false
+    is_unique_key: true
     key_columns:
       - salesordernumber
       - salesorderlinenumber
