@@ -30,5 +30,8 @@ columns:
     data_type: decimal(38,0)
   - name: currencykey
     data_type: decimal(38,0)
+  - name: MINUTE_REACH
+    data_type: decimal(1,0)
+    sql: CASE WHEN "salesamount" > 10000 then 1 else 0 end
 connection_id: con_SE_DEMO_LIBRARY_AS_ADVENTURE
 table: factinternetsales

@@ -1,0 +1,18 @@
+unique_name: minute_reach
+object_type: dimension
+label: minute_reach
+hierarchies:
+  - unique_name: Minute_Reach_Hierarchy
+    label: Minute Reach Hierarchy
+    levels:
+      - unique_name: Minute_Reach_Level
+is_degenerate: true
+level_attributes:
+  - unique_name: Minute_Reach_Level
+    label: Minute Reach Level
+    contains_unique_names: false
+    dataset: factinternetsales
+    key_columns:
+      - MINUTE_REACH
+    name_column: MINUTE_REACH
+type: standard

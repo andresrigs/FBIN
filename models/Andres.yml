@@ -1,7 +1,8 @@
 unique_name: Andres
 object_type: model
 label: Andres
-dimensions: []
+dimensions:
+  - minute_reach
 metrics:
   - unique_name: OrderQuantity
   - unique_name: SalesAmount
@@ -13,6 +14,7 @@ metrics:
   - unique_name: ColorBlue
   - unique_name: New Calculation copy
   - unique_name: ColorBlack
+  - unique_name: minute_reach_plus_one
 perspectives:
   - unique_name: Andres-Persp
     dimensions:

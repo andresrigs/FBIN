@@ -1,0 +1,6 @@
+unique_name: minute_reach_plus_one
+object_type: metric_calc
+label: minute_reach_plus_one
+expression: >-
+  ([Measures].[SalesAmount],
+  [minute_reach].[Minute_Reach_Hierarchy].[Minute_Reach_Level].&[1])
