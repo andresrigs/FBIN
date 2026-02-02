@@ -15,6 +15,10 @@ metrics:
   - unique_name: New Calculation copy
   - unique_name: ColorBlack
   - unique_name: minute_reach_plus_one
+  - unique_name: wbd rat 1
+  - unique_name: New Calculation copy1
+  - unique_name: TupleTest
+  - unique_name: TupleTestMaxDate
 perspectives:
   - unique_name: Andres-Persp
     dimensions:
@@ -37,14 +41,6 @@ relationships:
     to:
       dimension: ProductDim
       level: dimproduct_dimension Level
-  - unique_name: factinternetsales_orderdatekey_to_DateDim_datecustom_dimension Level
-    from:
-      dataset: factinternetsales
-      join_columns:
-        - orderdatekey
-    to:
-      dimension: DateDim
-      level: datecustom_dimension Level
   - unique_name: factinternetsales_customerkey_to_CustomerDim_dimcustomer_dimension Level
     from:
       dataset: factinternetsales
@@ -89,11 +85,19 @@ relationships:
     to:
       dimension: CustomerDim
       level: dimcustomer_dimension Level
-  - unique_name: factdemotab copy (1)_orderdatekey_to_DateDim_datecustom_dimension Level
+  - unique_name: factinternetsales_shipdatekey_to_DateDim_dateL
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: DateDim
+      level: dateL
+  - unique_name: factdemotab copy (1)_orderdatekey_to_DateDim_dateL
     from:
       dataset: factdemotab copy (1)
       join_columns:
         - orderdatekey
     to:
       dimension: DateDim
-      level: datecustom_dimension Level
+      level: dateL

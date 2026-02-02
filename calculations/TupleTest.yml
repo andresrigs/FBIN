@@ -1,0 +1,7 @@
+unique_name: TupleTest
+object_type: metric_calc
+label: TupleTest
+expression: >-
+  ([DateDim].[datecustom_dimension
+  Hierarchy].[dateL].&[`DateAdd('yyyy',-18,Format(Now(), 'yyyymmdd'))`],
+  [Measures].[SalesAmount])

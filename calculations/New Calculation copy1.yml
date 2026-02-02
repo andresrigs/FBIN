@@ -1,0 +1,11 @@
+unique_name: New Calculation copy1
+object_type: metric_calc
+label: New Calculation copy1
+expression: |-
+  COUNT(
+      NONEMPTY(
+          [DateDim].[datecustom_dimension Hierarchy].[dateL].Members,
+          --([Measures].[SalesAmount],[DateDim].[datecustom_dimension Hierarchy].Members),
+          [Measures].[SalesAmount]
+      )
+  )

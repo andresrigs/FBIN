@@ -4,3 +4,4 @@ label: Weight
 calculation_method: sum
 column: weight
 dataset: factdemotab copy (1)
+unrelated_dimensions_handling: repeat

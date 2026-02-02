@@ -1,5 +1,20 @@
 unique_name: wbd rat 1
 object_type: metric_calc
 label: wbd rat 1
-expression: MDX expression
-is_hidden: false
+expression: |-
+  Avg(
+      CrossJoin(
+        Descendants(
+          [orderD].[OrderH].CurrentMember,
+          [orderD].[OrderH].[Order],
+          SELF
+        ),
+        Descendants(
+          [DateDim].[datecustom_dimension Hierarchy].CurrentMember,
+          [DateDim].[datecustom_dimension Hierarchy].[dateL],
+          SELF
+        )
+      ),
+      [Measures].[Weight]
+    )
+mdx_aggregate_function: SUM

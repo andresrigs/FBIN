@@ -1,0 +1,7 @@
+unique_name: TupleTestMaxDate
+object_type: metric_calc
+label: TupleTestMaxDate
+expression: >-
+  ([DateDim].[datecustom_dimension
+  Hierarchy].[dateL].&[`selectMaxDate("AS_ADVENTURE.DATECUSTOM", "pk_date")`],
+  [Measures].[SalesAmount])

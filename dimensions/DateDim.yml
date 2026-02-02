@@ -34,13 +34,18 @@ calculation_groups:
 hierarchies:
   - unique_name: datecustom_dimension Hierarchy
     label: datecustom_dimension Hierarchy
+    default_member:
+      apply_only_when_in_query: false
+      expression: >-
+        [DateDim].[datecustom_dimension
+        Hierarchy].[dateL].[`DateAdd('yyyy',-18,Format(Now(), 'mm/dd/yyyy'))`]
     levels:
       - unique_name: year_name
       - unique_name: month
-      - unique_name: datecustom_dimension Level
+      - unique_name: dateL
 level_attributes:
-  - unique_name: datecustom_dimension Level
-    label: datecustom_dimension Level
+  - unique_name: dateL
+    label: dateL
     contains_unique_names: false
     dataset: datecustom
     is_unique_key: false

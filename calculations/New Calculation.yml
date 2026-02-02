@@ -3,16 +3,24 @@ object_type: metric_calc
 label: New Calculation
 expression: |-
   IIF(
-      ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])=0,
-      NULL,
-      AGGREGATE(
+      COUNT(
           NONEMPTY(
-                  [orderD].[orderH].[order].members,
-                  (
-                  [Measures].[Weight],[DateDim].[datecustom_dimension Hierarchy].CurrentMember
-                  )
-              ),
-              ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
+              [DateDim].[datecustom_dimension Hierarchy].[dateL].Members,
+              [Measures].[SalesAmount]
           )
-          / ([Measures].[SalesAmount], [Color Dim].[Color].[color].&[Blue])
+      ) = 0,
+      NULL,
+      AVG(
+          NONEMPTY(
+              [DateDim].[datecustom_dimension Hierarchy].[dateL].Members,
+              [Measures].[SalesAmount]
+          ),
+          SUM(
+              NONEMPTY(
+                  [orderD].[orderH].[order].members,
+                  [Measures].[Weight]
+              ),
+              [Measures].[SalesAmount]
+          )
       )
+  )
