@@ -201,4 +201,4 @@ columns:
   - name: rpt_year_lykey
     data_type: datetime
 connection_id: con_SE_DEMO_LIBRARY_AS_ADVENTURE
-table: datecustom
+sql: select * from "AS_ADVENTURE"."DATECUSTOM"
