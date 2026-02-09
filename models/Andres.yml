@@ -3,6 +3,7 @@ object_type: model
 label: Andres
 dimensions:
   - minute_reach
+  - Product_Key
 metrics:
   - unique_name: OrderQuantity
   - unique_name: SalesAmount
@@ -19,6 +20,7 @@ metrics:
   - unique_name: New Calculation copy1
   - unique_name: TupleTest
   - unique_name: TupleTestMaxDate
+  - unique_name: m_factinternetsales2_orderquantity_sum
 perspectives:
   - unique_name: Andres-Persp
     dimensions:
