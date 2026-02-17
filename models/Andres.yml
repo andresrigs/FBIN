@@ -4,6 +4,7 @@ label: Andres
 dimensions:
   - minute_reach
   - Product_Key
+  - Currency_Code
 metrics:
   - unique_name: OrderQuantity
   - unique_name: SalesAmount
@@ -21,6 +22,7 @@ metrics:
   - unique_name: TupleTest
   - unique_name: TupleTestMaxDate
   - unique_name: m_factinternetsales2_orderquantity_sum
+  - unique_name: CurrencyMetric
 perspectives:
   - unique_name: Andres-Persp
     dimensions:

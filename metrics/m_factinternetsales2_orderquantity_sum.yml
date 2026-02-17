@@ -1,6 +1,6 @@
 unique_name: m_factinternetsales2_orderquantity_sum
 object_type: metric
-label: Order Quantity
+label: Order Quantity2
 calculation_method: sum
-column: orderquantity
+column: ORDERQUANTITY
 dataset: factinternetsales2

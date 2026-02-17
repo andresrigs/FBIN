@@ -1,0 +1,6 @@
+unique_name: CurrencyMetric
+object_type: metric
+label: CurrencyMetric
+calculation_method: sum
+column: currency_key
+dataset: CurrCode

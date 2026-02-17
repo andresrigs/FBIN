@@ -16,7 +16,7 @@ columns:
     data_type: decimal(38,0)
   - name: customerkey
     data_type: decimal(38,0)
-  - name: orderquantity
+  - name: ORDERQUANTITY
     data_type: decimal(38,0)
   - name: unitprice
     data_type: double
@@ -34,4 +34,4 @@ columns:
     data_type: decimal(1,0)
     sql: CASE WHEN "salesamount" > 10000 then 1 else 0 end
 connection_id: con_SE_DEMO_LIBRARY_AS_ADVENTURE
-table: factinternetsales2
+table: FACTINTERNETSALES2
