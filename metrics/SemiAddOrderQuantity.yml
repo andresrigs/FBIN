@@ -1,0 +1,12 @@
+unique_name: SemiAddOrderQuantity
+object_type: metric
+label: SemiAddOrderQuantity
+calculation_method: sum
+column: orderquantity
+dataset: factinternetsales
+format: general number
+semi_additive:
+  degenerate_dimensions: []
+  position: last
+  relationships:
+    - factinternetsales_shipdatekey_to_DateDim_dateL

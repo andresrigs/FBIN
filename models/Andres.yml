@@ -10,19 +10,17 @@ metrics:
   - unique_name: SalesAmount
   - unique_name: YTDTest
   - unique_name: Ratio
-  - unique_name: New Calculation
   - unique_name: Weight
   - unique_name: m_factinternetsales_customerkey_dc
   - unique_name: ColorBlue
-  - unique_name: New Calculation copy
   - unique_name: ColorBlack
   - unique_name: minute_reach_plus_one
   - unique_name: wbd rat 1
-  - unique_name: New Calculation copy1
   - unique_name: TupleTest
   - unique_name: TupleTestMaxDate
   - unique_name: m_factinternetsales2_orderquantity_sum
   - unique_name: CurrencyMetric
+  - unique_name: SemiAddOrderQuantity
 perspectives:
   - unique_name: Andres-Persp
     dimensions:
