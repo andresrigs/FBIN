@@ -40,6 +40,7 @@ relationships:
       dataset: factinternetsales
       join_columns:
         - productkey
+    role_play: prod {0}
     to:
       dimension: ProductDim
       level: dimproduct_dimension Level
@@ -74,6 +75,7 @@ relationships:
       dataset: factdemotab copy (1)
       join_columns:
         - productkey
+    role_play: prod {0}
     to:
       dimension: ProductDim
       level: dimproduct_dimension Level

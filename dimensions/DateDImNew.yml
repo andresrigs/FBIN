@@ -1,0 +1,36 @@
+unique_name: DateDImNew
+object_type: dimension
+label: DateDim
+hierarchies:
+  - unique_name: DateDIm Hierarchy
+    label: DateDIm Hierarchy
+    levels:
+      - unique_name: YearNew
+      - unique_name: MonthNew
+      - unique_name: DateL
+level_attributes:
+  - unique_name: DateL
+    label: DateL
+    contains_unique_names: false
+    dataset: datecustom (1)
+    key_columns:
+      - datekey
+    name_column: datekey
+    time_unit: day
+  - unique_name: YearNew
+    label: Year
+    contains_unique_names: false
+    dataset: datecustom (1)
+    key_columns:
+      - year_name
+    name_column: year_name
+    time_unit: year
+  - unique_name: MonthNew
+    label: Month
+    contains_unique_names: false
+    dataset: datecustom (1)
+    key_columns:
+      - month
+    name_column: month_name
+    time_unit: month
+type: time

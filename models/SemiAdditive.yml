@@ -1,0 +1,23 @@
+unique_name: SemiAdditive
+object_type: model
+label: SemiAdditive
+metrics:
+  - unique_name: OrderQuantityNew
+  - unique_name: m_factinternetsales_(1)_orderquantity_sum
+relationships:
+  - unique_name: factinternetsales (1)_orderdatekey_to_DateDImNew_DateL
+    from:
+      dataset: factinternetsales (1)
+      join_columns:
+        - orderdatekey
+    to:
+      dimension: DateDImNew
+      level: DateL
+  - unique_name: factinternetsales (1)_productkey_to_DimProductDB_product
+    from:
+      dataset: factinternetsales (1)
+      join_columns:
+        - productkey
+    to:
+      dimension: DimProductDB
+      level: product

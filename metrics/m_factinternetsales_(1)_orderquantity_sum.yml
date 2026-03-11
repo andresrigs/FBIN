@@ -1,0 +1,11 @@
+unique_name: m_factinternetsales_(1)_orderquantity_sum
+object_type: metric
+label: OrderQuantitySemi
+calculation_method: sum
+column: orderquantity
+dataset: factinternetsales (1)
+semi_additive:
+  degenerate_dimensions: []
+  position: last
+  relationships:
+    - factinternetsales (1)_orderdatekey_to_DateDImNew_DateL
