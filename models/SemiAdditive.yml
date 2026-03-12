@@ -21,3 +21,11 @@ relationships:
     to:
       dimension: DimProductDB
       level: product
+  - unique_name: factdemotab copy_taxamt_to_DimProductDB_englishproductname
+    from:
+      dataset: factdemotab copy
+      join_columns:
+        - taxamt
+    to:
+      dimension: DimProductDB
+      level: englishproductname

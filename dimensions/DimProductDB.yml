@@ -6,7 +6,18 @@ hierarchies:
     label: dimproduct_dimension Hierarchy
     levels:
       - unique_name: productline
+      - unique_name: englishproductname
       - unique_name: product
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: startdate
+            label: startdate
+            contains_unique_names: false
+            dataset: dimproductNew
+            is_unique_key: false
+            key_columns:
+              - startdate
+            name_column: startdate
 level_attributes:
   - unique_name: product
     label: product
@@ -22,4 +33,11 @@ level_attributes:
     key_columns:
       - productline
     name_column: productline
+  - unique_name: englishproductname
+    label: englishproductname
+    contains_unique_names: false
+    dataset: dimproductNew
+    key_columns:
+      - englishproductname
+    name_column: englishproductname
 type: standard
